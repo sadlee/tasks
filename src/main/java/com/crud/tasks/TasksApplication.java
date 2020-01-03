@@ -9,7 +9,7 @@ public class TasksApplication {
 	public static void main(String[] args) {
 
 		TaskDto taskDto = new TaskDto (
-				(long)1,
+				(long) 1,
 				"Test title",
 				"I want to be a coder!");
 
