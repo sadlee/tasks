@@ -10,8 +10,8 @@ import java.util.List;
 public class TaskController {
 
 
-    @RequestMapping(method = RequestMethod.GET, value = "getTasks")
-    public List<TaskDto> getTasks() {
+    @RequestMapping(method = RequestMethod.GET, value = "getTask")
+    public List<TaskDto> getTask() {
         return new ArrayList<>();
     }
 
