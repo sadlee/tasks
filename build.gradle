@@ -2,11 +2,11 @@ plugins {
 	id 'org.springframework.boot' version '2.2.2.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+	id 'war'
 }
 
 group = 'com.crud'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
@@ -19,7 +19,9 @@ dependencies {
 	compile('mysql:mysql-connector-java')
 	annotationProcessor('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compileOnly('org.springframework.boot:spring-boot-starter-tomcat')
 }
 test {
 	useJUnitPlatform()
 }
+
