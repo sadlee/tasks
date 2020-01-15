@@ -25,7 +25,6 @@ public class TrelloController {
                 .filter(trelloBoardDto -> !trelloBoardDto.getId().equals(null) && trelloBoardDto.getName().contains("Kodilla")) // <-- zadanie 18.2.3
                 .forEach(trelloBoardDto -> {
                     System.out.println(trelloBoardDto.getId() + " " + trelloBoardDto.getName());
-                    System.out.println("This board contains following lists: ");
                 });
     }
 }
