@@ -1,5 +1,6 @@
-package com.crud.tasks.domain;
+package com.crud.tasks.mapper;
 
+import com.crud.tasks.domain.BadgesDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
