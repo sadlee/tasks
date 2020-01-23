@@ -37,8 +37,6 @@ public class TaskMapperTestSuite {
 
         //Then
         assertEquals("Test_title", theTask.getTitle());
-
-        Task task1
     }
 
     @Test
