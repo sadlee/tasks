@@ -6,9 +6,10 @@ import com.crud.tasks.repository.TaskRepository;
 import com.crud.tasks.service.SimpleEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
+@Component
 public class EmailScheduler {
-
     private static final String SUBJECT = "Tasks: Once a day email";
 
     @Autowired
@@ -21,16 +22,16 @@ public class EmailScheduler {
     private AdminConfig adminConfig;
 
     @Scheduled(cron = "0 0 10 * * *")
-    //@Scheduled(fixedDelay = 10000)
+    //@Scheduled(fixedDelay = 90000)
     public void sendInformationEmail() {
         long size = taskRepository.count();
-        String taskConvert = " task";
+        String link = " task";
         if(size > 1) {
-            taskConvert = " tasks";
+            link = " tasks";
         }
         simpleEmailService.send(new Mail(
                 adminConfig.getAdminMail(),
                 SUBJECT,
-                "Currently in database you got: " + size + taskConvert));
+                "Currently in database you got: " + size + link));
     }
 }

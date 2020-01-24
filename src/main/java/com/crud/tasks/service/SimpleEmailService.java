@@ -18,7 +18,6 @@ public class SimpleEmailService {
     @Autowired
     private JavaMailSender javaMailSender;
 
-
     public void send(final Mail mail) {
         LOGGER.info("Starting email preparation...");
         try {
